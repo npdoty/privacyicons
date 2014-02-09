@@ -1,0 +1,49 @@
+{
+    "author":   "privacy labels team",
+    "url":      "http://example.com/privacylabels",
+    
+    "types": {
+        "name": "contact information",
+        "collect": [
+            {
+                "name": "user input",
+                "policy": "yes"
+            }
+        ],
+        "share": [
+            {
+                "name": "other companies",
+                "policy": "opt out",
+            },
+            {
+                "name": "public forums",
+                "policy": "no",
+            }
+        ],
+        "uses": [
+            {
+                "name": "to provide service and maintain site",
+                "policy": "yes"
+            },
+            {
+                "name": "marketting",
+                "policy": "opt in",
+            },
+            {
+                "name": "telemarketting",
+                "policy": "no",
+            },
+            {
+                "name": "profiling",
+                "policy": "yes",
+            }
+        ]
+    }
+}
+
+
+            
+
+
+
+

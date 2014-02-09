@@ -1,0 +1,108 @@
+{
+    "id": "http://example.com/privacy-labels#",
+    "$schema": "http://json-schema.org/schema#",
+    "title": "Privacy Nutrition Labels Schema",
+    "description": "some description. TODO:",
+    "type": "object",
+    "required": [
+        "types",
+        "url",
+        "author"
+    ],
+    "properties": {
+        "url": {
+            "type": "string"
+        },
+        "author": {
+            "type": "string"
+        },
+        "types": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/type"
+            }
+        }
+    },
+    "definitions": {
+        "policy": {
+            "type": "string",
+            "description": "what is the companies policy for this type and use",
+            "enum": [
+                "yes",
+                "no",
+                "opt out",
+                "opt in"
+            ]
+        },
+        "type": {
+            "type": "object",
+            "description": "The types of data this label presents information about",
+            "required": [
+                "name",
+                "uses",
+                "sharing"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "collect": {
+                    "type": "array",
+                    "description": "What data types are collected",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "The form this data is collected in",
+                            "enum": [
+                                "passive tracking",
+                                "user input"
+                            ]
+                        }
+                    }
+                },
+                "share": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "description": "Defines how a data-type is shared",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "This data type can be shared with",
+                                "enum": [
+                                    "other companies",
+                                    "public forums"
+                                ]
+                            },
+                            "policy": {
+                                "$ref": "#/definitions/policy"
+                            }
+                        }
+                    }
+                },
+                "use": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "description": "Defines aspects a data-type is used by the company",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "A kind of use associated with this data-type",
+                                "enum": [
+                                    "provide service and maintain site",
+                                    "marketing",
+                                    "telemarketing",
+                                    "profiling"
+                                ]
+                            },
+                            "policy": {
+                                "$ref": "#/definitions/policy"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
