@@ -1,5 +1,9 @@
 A project for representing essential points of privacy policies in a more user-friendly manner.
 
+## Spec
+
+* Data formats used in this toolchain are specified with [JSONSchema](http://json-schema.org/) in [specs](./specs)
+
 ## To run
 
 * [Install the Mozilla Add-on SDK](https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Installation).
