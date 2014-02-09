@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+  <script src="handlebars-v1.3.0.js" type="text/javascript" charset="utf-8"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>  
+  <script id="template-holder" type="">
+    <style type="text/css" media="screen">
+      body {font-family: Helvetica;}
+      td.yes {background-color: maroon; color: maroon;}
+      td.no {background-color: darkseagreen; color: darkseagreen;}
+      td.opt-out {background-color: maroon; color: white;}
+      td.opt-in {background-color: darkseagreen; color: white;}
+      td {width: 60px; height: 40px; text-align: center;}
+      td.data {background-color: lightgray; text-align: left; width: 160px;}
+      tr.subheading th {font-size: small; font-weight: normal; font-style: italic;}
+    </style>
+    <body>
+      <table border="0" cellspacing="5" cellpadding="5">
+        <thead>
+          <tr class="mainheading"><th rowspan="2">Information We Collect</th><th colspan="3">Ways We Use Your Information</th><th colspan="2">How We Share</th></tr>
+          <tr class="subheading">
+            <th>to provide service</th><th>marketing</th><th>profiling</th><th>other companies</th><th>public</th>
+          </tr>
+        </thead>
+        {{#each datarows}}
+          <tr>
+            <td class="data">{{this.data-type}}</td>
+            <td class="{{this.uses.service}}">{{this.uses.service}}</td>
+            <td class="{{this.uses.marketing}}">{{this.uses.marketing}}</td>
+            <td class="{{this.uses.profiling}}">{{this.uses.profiling}}</td>
+            <td class="{{this.shares.partners}}">{{this.shares.partners}}</td>
+            <td class="{{this.shares.public}}">{{this.shares.public}}</td>
+          </tr>
+        {{/each}}
+      </table>
+    </body>
+  </script>
+  <script type="text/javascript" charset="utf-8">
+    $(function() {
+      var source = $("#template-holder").html();
+      console.log(source);
+      var template = Handlebars.compile(source);
+      var datarows = [
+        {
+          "data-type": "contact information", 
+          "uses": {"service":"yes", "marketing": "opt-out", "profiling": "opt-out"}, 
+          "shares": {"partners":"yes", "public": "opt-in"}
+         },
+         {
+           "data-type": "cookies", 
+           "uses": {"service":"yes", "marketing": "no", "profiling": "opt-out"}, 
+           "shares": {"partners":"opt-out", "public": "no"}
+          }
+      ];    
+      var context = {"datarows": datarows};
+      var html = template(context);
+      console.log(html);
+      $('body').html(html);
+    });
+  </script>
+</head>
+<body>
+</body>
