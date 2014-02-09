@@ -3,10 +3,14 @@ var tabs = require("sdk/tabs");
 var data = require("sdk/self").data;
 
 var icon_panel = require("sdk/panel").Panel({
-  width: 412,
+  width: 600,
   height: 500,
   contentURL: data.url("panel.html"),
-  //contentScriptFile: data.url("get-text.js")
+  contentScriptFile: [
+    data.url("jquery-1.10.2.min.js"),
+    data.url("handlebars-v1.3.0.js"), 
+    data.url("render.js")
+  ]
 });
 
 var widget = widgets.Widget({
