@@ -1,7 +1,5 @@
-console.log("render.js");
 $(function() {
   var source = $("#template-holder").html();
-  console.log(source);
   var template = Handlebars.compile(source);
   var datarows = [
     {
@@ -17,6 +15,5 @@ $(function() {
   ];    
   var context = {"datarows": datarows};
   var html = template(context);
-  console.log(html);
   $('#chart').html(html);
 });
