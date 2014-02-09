@@ -19,3 +19,8 @@ var widget = widgets.Widget({
   contentURL: "http://www.mozilla.org/favicon.ico",
   panel: icon_panel
 });
+
+tabs.on("ready", function(tab){
+  console.log("tab ready");
+  icon_panel.postMessage({"title": tab.title, "url": tab.url});
+});
