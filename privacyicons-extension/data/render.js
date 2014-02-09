@@ -27,6 +27,7 @@ function render() {
       }
   ];    
   var context = {"datarows": datarows, "site":title, "url": url};
-  var html = template(context);
+  var html = template(privacy_data);
+  console.log(html);
   $('#chart').html(html);
 }

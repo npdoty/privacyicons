@@ -1,0 +1,82 @@
+var privacy_data = {
+    "author":   "privacy labels team",
+    "url":      "http://example.com/privacylabels",
+    "site": "Example.com",
+    
+    "types": [
+      {
+        "name": "contact information",
+        "collect": [
+            {
+                "name": "user input",
+                "policy": "yes"
+            }
+        ],
+        "share": [
+            {
+                "name": "other companies",
+                "policy": "opt-out",
+            },
+            {
+                "name": "public forums",
+                "policy": "no",
+            }
+        ],
+        "uses": [
+            {
+                "name": "to provide service and maintain site",
+                "policy": "yes"
+            },
+            {
+                "name": "marketing",
+                "policy": "opt-in",
+            },
+            {
+                "name": "profiling",
+                "policy": "yes",
+            }
+        ]
+      },
+      {
+        "name": "cookies",
+        "collect": [
+            {
+                "name": "user input",
+                "policy": "yes"
+            }
+        ],
+        "share": [
+            {
+                "name": "other companies",
+                "policy": "no",
+            },
+            {
+                "name": "public forums",
+                "policy": "no",
+            }
+        ],
+        "uses": [
+            {
+                "name": "to provide service and maintain site",
+                "policy": "yes"
+            },
+            {
+                "name": "marketing",
+                "policy": "opt-out",
+            },
+            {
+                "name": "profiling",
+                "policy": "opt-out",
+            }
+        ]
+      }
+      
+    ]
+};
+
+
+            
+
+
+
+

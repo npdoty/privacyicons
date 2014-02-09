@@ -22,14 +22,15 @@
             <th>to provide service</th><th>marketing</th><th>profiling</th><th>other companies</th><th>public</th>
           </tr>
         </thead>
-        {{#each datarows}}
+        {{#each types}}
           <tr>
-            <td class="data">{{this.data-type}}</td>
-            <td class="{{this.uses.service}}">{{this.uses.service}}</td>
-            <td class="{{this.uses.marketing}}">{{this.uses.marketing}}</td>
-            <td class="{{this.uses.profiling}}">{{this.uses.profiling}}</td>
-            <td class="{{this.shares.partners}}">{{this.shares.partners}}</td>
-            <td class="{{this.shares.public}}">{{this.shares.public}}</td>
+            <td class="data">{{this.name}}</td>
+            {{#each this.uses}}
+              <td class="{{this.policy}}">{{this.policy}}</td>
+            {{/each}}
+            {{#each this.share}}
+              <td class="{{this.policy}}">{{this.policy}}</td>
+            {{/each}}
           </tr>
         {{/each}}
       </table>

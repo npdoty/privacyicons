@@ -9,6 +9,7 @@ var icon_panel = require("sdk/panel").Panel({
   contentScriptFile: [
     data.url("jquery-1.10.2.min.js"),
     data.url("handlebars-v1.3.0.js"), 
+    data.url("acme.json"),
     data.url("render.js")
   ]
 });
