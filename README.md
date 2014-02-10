@@ -12,6 +12,10 @@ From "*Standardizing Privacy Notices: An Online Study of the Nutrition Label App
 
 P.G. Kelley, L.J. Cesca, J. Bresee, and L.F. Cranor.  *Standardizing Privacy Notices: An Online Study of the Nutrition Label Approach.*  CHI 2010.
 
+## Documentation
+
+[Explanation page for users](documentation.md)
+
 ## To run
 
 * [Install the Mozilla Add-on SDK](https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Installation).
