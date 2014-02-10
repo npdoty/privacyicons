@@ -12,6 +12,8 @@ From "*Standardizing Privacy Notices: An Online Study of the Nutrition Label App
 
 P.G. Kelley, L.J. Cesca, J. Bresee, and L.F. Cranor.  *Standardizing Privacy Notices: An Online Study of the Nutrition Label Approach.*  CHI 2010.
 
+[Ongoing list of related privacy icons / short notice efforts](https://pinboard.in/u:npdoty/t:privacy-icons/) [from Nick's pinboard]
+
 ## Documentation
 
 [Explanation page for users](documentation.md)
