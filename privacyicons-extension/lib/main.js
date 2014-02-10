@@ -19,7 +19,7 @@ function getLocation(href) {
 
 var icon_panel = require("sdk/panel").Panel({
   width: 600,
-  height: 500,
+  height: 650,
   contentURL: data.url("panel.html"),
   contentScriptFile: [
     data.url("jquery-1.10.2.min.js"),
