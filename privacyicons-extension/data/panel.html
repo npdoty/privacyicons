@@ -11,29 +11,82 @@
       td.data {background-color: lightgray; text-align: left; width: 160px;}
       tr.subheading th {font-size: small; font-weight: normal; font-style: italic;}
       h2 { color: gray; font-size: small; margin-top: -10px}
+      .key div {
+      	height: 45px;
+      	width: 75px;
+      	border: 1px solid black;
+      }
+
+      .key div p {
+          text-align:center;
+          color:white;
+          font-size: 1em;
+      }
+
+      div.space{
+      	height: 45px;
+      	width: 400px;
+      	border-radius: 5px;
+      }
+
+      #one {
+      	background-color: maroon;
+      	float: left;
+      	clear: left;
+      }
+
+      #two {
+      	background-color: maroon;
+      	float: left;
+      	clear: left;
+      }
+
+      #three {
+      	background-color: green;
+      	float: left;
+      	clear: left;
+      }
+
+      #four {
+      	background-color: green;
+        float: left; 
+        clear: left;
+      }
+      
     </style>
     <body>
       <h1>Privacy Policy Summary for {{site}}</h1>
       <h2>{{url}}</h2>
       <table border="0" cellspacing="5" cellpadding="5">
         <thead>
-          <tr class="mainheading"><th rowspan="2">Information We Collect</th><th colspan="3">Ways We Use Your Information</th><th colspan="2">How We Share</th></tr>
+          <tr class="mainheading"><th rowspan="2">Information We Collect</th><th colspan="2">How We Share</th><th colspan="3">Ways We Use Your Information</th></tr>
           <tr class="subheading">
-            <th>to provide service</th><th>marketing</th><th>profiling</th><th>other companies</th><th>public</th>
+            <th>other companies</th><th>public</th><th>to provide service</th><th>marketing</th><th>profiling</th>
           </tr>
         </thead>
         {{#each types}}
           <tr>
             <td class="data">{{this.name}}</td>
-            {{#each this.uses}}
+            {{#each this.share}}
               <td class="{{this.policy}}">{{this.policy}}</td>
             {{/each}}
-            {{#each this.share}}
+            {{#each this.uses}}
               <td class="{{this.policy}}">{{this.policy}}</td>
             {{/each}}
           </tr>
         {{/each}}
       </table>
+      <h3>Key</h3>
+      <div class="key">
+  	    <div id="one"></div> 
+  	    <div class="space">Data will be used for this purpose</div>
+  	    <div id="two"><p>opt-out</p></div> 
+  	    <div class="space">Data will be used for this purpose,but you may opt out of use</div>
+        <div id="three"></div>
+        <div class="space">Data will not be used for this purpose</div>
+  	    <div id="four"><p>opt-in</p></div>
+  	    <div class="space">Data will not be used for this purpose,but you may opt in of use</div>
+  	  </div>
     </body>
   </script>
 </head>
