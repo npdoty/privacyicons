@@ -3,6 +3,14 @@ A project for representing essential points of privacy policies in a more user-f
 ## Spec
 
 * Data formats used in this toolchain are specified with [JSONSchema](http://json-schema.org/) in [specs](./specs)
+ 
+## References
+
+From "*Standardizing Privacy Notices: An Online Study of the Nutrition Label Approach,*" 
+
+"Further work should concentrate on not just how to present policy information, but also on how to facilitate comparisons.  Levy and Hastak recommend continuing to provide better education and context to help consumers  make better decisions. While our attached list of definitions is a start, **framing the policy with contextual information and presenting comparisons in more useful ways would be productive directions to take future research in usable privacy policies**." 
+
+P.G. Kelley, L.J. Cesca, J. Bresee, and L.F. Cranor.  *Standardizing Privacy Notices: An Online Study of the Nutrition Label Approach.*  CHI 2010.
 
 ## To run
 
