@@ -18,6 +18,15 @@ P.G. Kelley, L.J. Cesca, J. Bresee, and L.F. Cranor.  *Standardizing Privacy Not
 
 [Explanation page for users](documentation.md)
 
+### Screenshots
+
+Screenshot of the extension with sample (faked/hard-coded) data:
+<img src="images/screenshot-wikipedia-sample.png" alt="Screenshot of Wikipedia with sample policy information" height="400"/>
+
+Screenshot of the extension parsing actual P3P-declared data:
+<img src="images/screenshot-microsoft-p3p.png" alt="Screenshot of Microsoft with policy information from live P3P policy" height="400"/>
+
+
 ## To run
 
 * [Install the Mozilla Add-on SDK](https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Installation).
